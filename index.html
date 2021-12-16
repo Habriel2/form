@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="homi.css" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <a href="https://www.quintoandar.com.br/condominio/residencial-santa-amelia-praca-da-bandeira-rio-de-janeiro-rp0gsgmlek?utm_medium=cpc&utm_source=google&utm_campaign=dsa_rj&utm_content=437749982078&utm_term=dsa&gclid=EAIaIQobChMIwJCplIb78wIVCZyzCh3N8Q47EAAYASAAEgJn2vD_BwE" class="logo">CRSA</a>
+
+            <ul>
+                <li><a href="login.php" class="ativo">Fazer Login</a></li>
+            </u>
+            </nav>
+
+            <section class="principal">
+                <h2>Condominio Residencial</h2>
+                <h2>Santa Amelia</h2>
+                <div class="links">
+                    <a> Gabriel Henrique</a>
+                    <a> Ana Cristina</a>
+                    <a> Marcos Paulo</a>
+                    <a> Huendson de Oliveira</a>
+                    <a> Victor Rocha</a>
+                    <a> Breno Fernambel</a>
+            </div>
+            </section>
+</header>
+</body>
+</html>

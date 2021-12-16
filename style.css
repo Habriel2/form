@@ -1,0 +1,234 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+/* background */
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:#FF9F5B;
+  padding: 30px;
+}
+/* box, sombra, e resolução */
+.container{
+  position: relative;
+  max-width: 820px;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  padding: 40px 30px;
+  box-shadow: 0 5px 10px #161600;
+  perspective: 2700px;
+}
+/* IMAGEM DE LOGIN, e animação*/
+.container .cover{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 50%;
+  z-index: 98;
+  transition: all 1s ease;
+  transform-origin: left;
+  transform-style: preserve-3d; 
+}
+/* borrado, sombra DA FOTO */
+.container .cover::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #FF9F5B; 
+  opacity: 0.5;
+  z-index: 100;
+}
+/* borrado, sombra da FOTO TBM */
+.container .cover::after{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #FF9F5B;
+  opacity: 0.5;
+  z-index: 100;
+  transform: rotateY(180deg);
+}
+/* Antiga tela de flip, botarei um botao de cadastro no local 
+/*.container #flip:checked ~ .cover{
+  transform: rotateY(-180deg); 
+} */
+
+/* tamanho da imagem, absolute para implementar na area correta */
+.container .cover img{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 12;
+  backface-visibility: hidden;
+}
+.container .cover .back .backImg{ 
+	transform: rotateY(180deg); 
+	transform: rotateY(180deg); 
+}
+/* local do texto "SEJA MUITO BEM-VINDO ..." */
+.container .cover .text{
+  position: absolute;
+  z-index: 111;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* Tamanho do texto "Seja muito bem-vindo " */
+.cover .text .text-1,
+.cover .text .text-2{
+  font-size: 26px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  backface-visibility: hidden;
+}
+/* animação do text-1 e 2*/
+.cover .back .text .text-1, 
+.cover .back .text .text-2{ 
+	transform: rotateY(180deg); 
+}
+.cover .text .text-2{
+  font-size: 15px;
+  font-weight: 500;
+}
+/* cor do display */
+.container .forms{
+  height: 100%;
+  width: 100%;
+  background: rgb(255, 255, 255);
+}
+.container .form-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* tamanho do display */
+.form-content .login-form{
+  width: calc(100% / 2 - 25px);
+}
+.forms .form-content .title{
+  position: relative;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333
+}
+/* text login - cor, posição */
+.forms .form-content .title:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 25px;
+  background: #FF9F5B;
+}
+/* Tamanho do display e imagem */
+.forms .form-content .input-boxes{
+  margin-top: 100px;
+}
+/* tamanho de resolução dos textos */	
+.forms .form-content .input-box{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  margin: 10px 0;
+  position: relative;
+}
+/* tamanho das linhas, tamanho das fontes e cor da linha */
+.form-content .input-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+/* Efeito de sombra do botao enviar */
+.form-content .input-box input:focus,
+.form-content .input-box input:valid{
+  border-color: #d4864e;
+}
+.form-content .input-box i{
+  position: absolute;
+  color: #000000;
+  font-size: 17px;
+}	
+/* Texto em Negrito */
+.forms .form-content .text{
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+/* Cor do "Esqueceu sua senha" */
+.forms .form-content .text a{
+  text-decoration: none;
+  color: #FF9F5B;
+}
+/* resolução e cor do botao */
+.forms .form-content .button{
+  color: rgb(255, 255, 255);
+  margin-top: 40px;
+}
+/* cor do texto do botão enviar, tamanho e animação */
+.forms .form-content .button input{
+  color: rgb(255, 255, 255);
+  background: #FF9F5B;
+  border-radius: 6px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+/* cor do botao enviar parte decima */
+.forms .form-content .button input:hover{
+  background: #e7853f;
+}
+/* cor do texto cadastre-se */
+.forms .form-content label{
+  color: #FF9F5B;	
+  cursor: pointer;	
+}
+/* resolução e tamanho do display */
+.forms .form-content .login-text,
+.forms .form-content .sign-up-text{	
+  text-align: center;
+  margin-top: 200px;
+}
+.container #flip{
+  display: none;
+}
+@media (max-width: 300px) {
+  .container .cover{
+    display: none;
+  }
+  .form-content .login-form,
+  .form-content .signup-form{
+    width: 100%;
+  }
+  .form-content .signup-form{
+    display: none;
+  }
+  .container #flip:checked ~ .forms .signup-form{
+    display: block;
+  }
+  .container #flip:checked ~ .forms .login-form{
+    display: none;
+  }
+}
